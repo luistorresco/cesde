@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,74 +6,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taller formularios</title>
+    <style>
+        .space_1 th {
+            padding-left: 50px;
+            padding-right: 50px;
+            text-align: start;
+        }
+        
+        
+        .checkbox {
+            padding-left: 50px;
+        }
+        
+        .espacio {
+            width: 300px;
+        }
+        
+
+    </style>
 </head>
 <body>
     <nav><h1>Solucion taller formularios</h1></nav>
     <main>
         <section= class="formulario">
-            <form action="">
-                <fieldset>
-                    <legend>datos del estudiante</legend>
+            <fieldset class="space_1">
+                <legend><h3>DATOS DEL ESTUDIANTE</h3></legend>
                 <table>
+                
                     <tr>
 
-                        <td>
-                            <label for="">identificacion *</label>
-                            <input type="number" max="17" required  placeholder="obligatoirio max(17) Nros" name="" id="">
-                            <label for="">fecha de Nacimiento *</label>
-                            <input type="date" name="" id="">
-                        </td>
-
-                    <tr>
-                        <td>
-                            <label for="">Apellidos</label>
-                            <input type="text" name="apellido" id="apellido" placeholder="Obligatorio max (20)letras " max="20">
-                            <label for="">Edad</label>
-                            <input type="number" name="edad" id="edad">
-                        </td>
+                        <th><label for="">Identificacion *</label></th>
+                        <td><input type="number" max="17"  required  placeholder="Obligatoirio max(17) Nros" name="" id=""></td>
+                        <th><label for="">Fecha de Nacimiento *</label></th>
+                        <td><input type="date" name="" id=""></td>
+                        <td rowspan="5" class="checkbox"><fieldset class="espacio">
+                            <legend>tiempo libre</legend>
+                            <input type="checkbox" name="Estudio" id="Estudio">Estudio <br>
+                            <input type="checkbox" name="Deporte" id="Deporte">Deporte <br>
+                            <input type="checkbox" name="Redes Sociales" id="Redes Sociales">Redes Sociales          <br>
+                            <input type="checkbox" name="Musica" id="Musica">Musica <br>
+                            <input type="checkbox" name="Video Juegos" id="Video Juegos">Video Juegos <br>
+                        </fieldset></td>
+                        
+                    </tr>
+                    
+                        <th><label for="">Apellidos</label></th>
+                        <td><input type="text" name="apellido" id="apellido" required placeholder="Obligatorio max (20)letras " max="20"></td>
+                        <th><label for="">Edad</label></th>
+                        <td><input type="number" name="edad" id="edad" max="150" min="1"></td>
                         
                     </tr>
 
                     <tr>
-                        <td>
-                            <label for="">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Obligatorio max (20)letras" max="20">
-                            <label for="">Mes de Nacimiento</label> 
-                            <input type="month" name="nacimiento" id="nacimiento">
-                        </td>
+                        
+                        <th><label for="">Nombre</label></th>
+                        <td><input type="text" name="nombre" id="nombre" required placeholder="Obligatorio max (20)letras" max="20"></td>
+                        <th><label for="">Mes de Nacimiento</label></th> 
+                        <td><input type="month" name="nacimiento" id="nacimiento"></td>
+                        
+                    </tr>
+
+                    <tr>
+                        
+                        <th><label for="">Correo</label></th>
+                        <td><input type="email" name="correo" id="correo"></td>
+                        <th><label for="">genero</label></th>
+                        <td><input type="radio" name="genero" id="genero">masculino 
+                        <input type="radio" name="genero" id="genero">femenino</td>
 
                     </tr>
 
                     <tr>
-                        <td>
-                            <label for="">Correo</label>
-                            <input type="email" name="correo" id="correo">
-
-                            
-                            <legend>genero</legend>
-                            <input type="radio" name="genero" id="genero">masculino 
-                            <input type="radio" name="genero" id="genero">femenino
-
-                        
-
-
-
-
-                        </td>
-
-
+                        <th><label for="">Celular</label></th>
+                        <td><input type="tel" name="celular" id="celular" placeholder ="###-###-##-##"></td>
+                        <th><label for="">Comuna (*Barrios*)</label></th>
+                        <td> <select name="barrios" id="barrios" required>
+                            <option value="">Elija una Opción</option>
+                            <option value="opcion1">tres esquinas</option>
+                            <option value="opcion2">el plan</option>
+                            <option value="opcion3">el morro</option></td>
+                
 
 
                     </tr>
-
+              
                 </table>
 
-            </fieldset>
-
-
-
-
             </form>
+        </fieldset>
         </section=>
 
     </main>
